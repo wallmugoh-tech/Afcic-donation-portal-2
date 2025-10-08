@@ -6,6 +6,8 @@ async function normalizeKenyaPhone(input) {
   throw new Error('Invalid phone number format. Use 07XXXXXXXX or +2547XXXXXXXX.');
 }
 
+const BACKEND_URL =
+  "https://afcic-donation-portal.onrender.com";
 const form = document.getElementById('donationForm');
 const resultDiv = document.getElementById('result');
 
