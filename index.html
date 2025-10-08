@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AFCIC Donation Support Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo-placeholder.png" alt="AFCIC Logo" width="140">
+    <h1>AFCIC Donation Support Portal</h1>
+    <p>Support Action for Children in Conflict</p>
+  </header>
+
+  <main>
+    <form id="donationForm">
+      <label for="phone">Safaricom phone number</label><br>
+      <input id="phone" name="phone" type="text" placeholder="07XXXXXXXX" required><br>
+
+      <label for="amount">Donation amount (KES)</label><br>
+      <input id="amount" name="amount" type="number" min="1" value="20" required><br>
+
+      <label>
+        <input type="checkbox" id="consent" required>
+        I consent to receive a B-Live bundle if eligible.
+      </label><br>
+
+      <button type="submit">Donate Now</button>
+    </form>
+
+    <div id="result" class="hidden"></div>
+
+    <p class="note">
+      🎁 Donations of KES 20–499 will receive a B-Live bundle worth KES 20.<br>
+      🎁 Donations KES 500+ will receive a B-Live bundle worth KES 50.<br>
+      💙 Donations below KES 20 are appreciated but do not include a bundle.
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2025 Action for Children in Conflict</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
