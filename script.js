@@ -7,7 +7,7 @@ async function normalizeKenyaPhone(input) {
 }
 
 const BACKEND_URL =
-  "https://afcic-donation-portal.onrender.com";
+  "https://afcic-donation-port-832198228605.europe-west1.run.app";
 const form = document.getElementById('donationForm');
 const resultDiv = document.getElementById('result');
 
