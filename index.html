@@ -1,47 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>AFCIC Donation Support Portal</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <img src="logo-placeholder.png" alt="AFCIC Logo" width="140">
+  <main class="card">
     <h1>AFCIC Donation Support Portal</h1>
-    <p>Support Action for Children in Conflict</p>
-  </header>
+    <p class="lead">Support Action for Children in Conflict</p>
 
-  <main>
-    <form id="donationForm">
-      <label for="phone">Safaricom phone number</label><br>
-      <input id="phone" name="phone" type="text" placeholder="07XXXXXXXX" required><br>
+    <form id="donationForm" method="post" action="donate.php">
+      <label for="name">Name (optional)</label>
+      <input id="name" name="name" type="text" placeholder="Your name">
 
-      <label for="amount">Donation amount (KES)</label><br>
-      <input id="amount" name="amount" type="number" min="1" value="20" required><br>
+      <label for="phone">Safaricom Phone Number</label>
+      <input id="phone" name="phone" type="text" placeholder="07XXXXXXXX" required>
 
-      <label>
-        <input type="checkbox" id="consent" required>
-        I consent to receive a B-Live bundle if eligible.
-      </label><br>
+      <label for="amount">Donation Amount (KES)</label>
+      <input id="amount" name="amount" type="number" min="1" placeholder="Enter amount in KES" required>
+
+      <label for="method">Payment Method</label>
+      <select id="method" name="method">
+        <option value="paybill" selected>NCBA Paybill (M-PESA)</option>
+        <option value="till">Till Number (future)</option>
+      </select>
+
+      <div class="note">Paybill: <strong>123456</strong> · Account: <strong>AFCIC001</strong> · Till: <strong>789012</strong></div>
 
       <button type="submit">Donate Now</button>
     </form>
 
-    <div id="result" class="hidden"></div>
-
-    <p class="note">
-      🎁 Donations of KES 20–499 will receive a B-Live bundle worth KES 20.<br>
-      🎁 Donations KES 500+ will receive a B-Live bundle worth KES 50.<br>
-      💙 Donations below KES 20 are appreciated but do not include a bundle.
-    </p>
+    <p class="small">Donations KES 20–500 receive a KES 20 B-Live bundle. Donations &gt; KES 500 receive a KES 50 B-Live bundle. Donations &lt; KES 20 do not receive a bundle.</p>
+    <footer>© 2025 Action for Children in Conflict (AFCIC)</footer>
   </main>
-
-  <footer>
-    <p>© 2025 Action for Children in Conflict</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
